@@ -1,6 +1,3 @@
-Claro, aquí tienes una versión mejorada de tu `README.md`. He hecho algunas mejoras en la estructura, la claridad y la adición de secciones que podrían ser útiles para otros usuarios y desarrolladores que interactúen con tu proyecto.
-
-```markdown
 # Quadra
 
 Quadra es una aplicación web construida con **Flask** para administrar y visualizar puestos de comida callejera. Permite a los usuarios agregar, ver y administrar información sobre puestos de comida en su ciudad, facilitando la búsqueda y la gestión de estos puestos.
