@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadra - Encuentra los Mejores Puestos de Comida</title>
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a Quadra</h1>
+        <p>Encuentra los mejores puestos de comida callejera y descubre nuevas opciones cerca de ti.</p>
+    </header>
+
+    <section>
+        <h2>¿Qué te gustaría hacer?</h2>
+        <ul>
+            <li><a href="{{ url_for('main.stalls') }}">Ver puestos de comida</a></li>
+            <li><a href="{{ url_for('main.add_stall') }}">Agregar un nuevo puesto de comida</a></li>
+            <li><a href="{{ url_for('main.login') }}">Iniciar sesión</a></li>
+            <li><a href="{{ url_for('main.register') }}">Registrarse</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>© 2025 Quadra. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puestos de Comida</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        main {
+            padding: 20px;
+        }
+        .stall {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 15px 0;
+            padding: 15px;
+        }
+        .stall img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .stall h2 {
+            margin: 0 0 10px 0;
+        }
+        .stall p {
+            margin: 5px 0;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Puestos de Comida</h1>
+    </header>
+
+    <main>
+        <section>
+            <p>Explora los mejores puestos de comida callejera subidos por nuestros usuarios.</p>
+
+            {% for stall in stalls %}
+                <div class="stall">
+                    <h2>{{ stall.name }}</h2>
+                    <p><strong>Reseña:</strong> {{ stall.review }}</p>
+                    <p><strong>Ubicación:</strong> {{ stall.location }}</p>
+                    {% if stall.image_url %}
+                        <img src="{{ stall.image_url }}" alt="Imagen del puesto {{ stall.name }}">
+                    {% else %}
+                        <p>No hay imagen disponible para este puesto.</p>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Quadra. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

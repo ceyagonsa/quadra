@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Puesto de Comida</title>
+</head>
+<body>
+    <h1>Agregar Puesto de Comida</h1>
+    
+    <!-- Verificar si hay mensajes de error -->
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+
+    <form action="/add_stall" method="POST">
+        <label for="name">Nombre del Puesto:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        
+        <label for="location">Ubicación (lat, long):</label>
+        <input type="text" id="location" name="location" required>
+        <br>
+        
+        <label for="review">Breve Reseña:</label>
+        <textarea id="review" name="review" required></textarea>
+        <br>
+        
+        <label for="image_url">URL de la Imagen (opcional):</label>
+        <input type="url" id="image_url" name="image_url">
+        <br>
+        
+        <button type="submit">Subir Puesto</button>
+    </form>
+    
+    <br>
+    <a href="{{ url_for('main.stalls') }}">Volver a la lista de puestos</a>
+</body>
+</html>
