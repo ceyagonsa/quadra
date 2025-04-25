@@ -26,7 +26,7 @@ Sigue estos pasos para instalar y configurar el proyecto en tu máquina local.
 Abre la terminal y ejecuta:
 
 ```bash
-git clone <URL_DEL_REPOSITORIO>
+git clone https://github.com/ceyagonsa/quadra.git
 cd quadra
 ```
 
@@ -85,7 +85,7 @@ Después de crear las tablas, puedes iniciar el servidor Flask con el siguiente 
 python run.py
 ```
 
-Accede a la aplicación en tu navegador en: [http://127.0.0.1:5000](http://127.0.0.1:5000).
+Accede a la aplicación en tu navegador en: http://127.0.0.1:5000/register.
 
 ## Paqueterías necesarias
 
@@ -110,7 +110,7 @@ Si deseas contribuir al proyecto, puedes seguir estos pasos:
 
 ## Autor
 
-**César**
+**César Yahit Gonzalez Salgado**
 
 ---
 
